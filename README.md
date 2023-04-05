@@ -4,5 +4,5 @@
 - С адаптивом
 - С burger menu
 
-![Screenshot](https://github.com/Elena5585/Classcamp_2022.github.io/blob/main/screenshot.jpg)
+![Screenshot](https://github.com/Elena5585/Classcamp_2022.github.io/blob/main/screenshot)
 
