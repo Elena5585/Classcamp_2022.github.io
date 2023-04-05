@@ -1,0 +1,193 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_reset'; 
+@use '_setup';
+
+.header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 89px;
+      background-color: $bgccolorHeader;       
+      
+      &__content{                        
+            display: flex;
+            flex-direction: row;           
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10%;
+      }
+      
+      &__content-block{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;            
+            align-items: center;
+            column-gap: 84px;
+            height: 100%;
+      }
+      &__block-links{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            column-gap: 52px;
+            height: 100%;
+      }
+      &__item-link{
+            display: block;
+            height: 100%;
+            padding: 34px 15px;
+            @include small;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $colorheader;
+      }
+      &__item-link:hover{
+            background: linear-gradient(45deg, black, grey, #eee);            
+            opacity: 80%;
+            z-index: 10;            
+            height: 100%;
+            padding: 32px 30px;
+            font-size: 18px;
+            text-shadow: #100E14 0 3px 3px;
+            color: $colorTitle;
+            font-weight: 700
+      }
+      &__link{
+            @include small;
+            font-weight: 700;
+            text-transform: uppercase; 
+            display: block;           
+            height: 100%;
+            padding: 34px 10px;
+      }
+      &__link:hover{
+            background: linear-gradient(45deg, rgb(214, 67, 67), grey, #eee);
+            opacity: 80%;
+            z-index: 10;            
+            height: 100%;  
+            padding: 32px 30px;   
+            font-size: 18px; 
+            text-shadow: $colormain 0 3px 3px;  
+            font-weight: 700;    
+      }
+
+}
+#create{color: #FF4343;}
+#sign{color: $colorheader;}
+#sign:hover{color: $colorheader;}
+#create:hover{color: #901313;}
+
+@media screen and (max-width: 1300px) {
+      .header{
+      &__content{           
+            column-gap: 3%;
+      } 
+      &__content-block{          
+            column-gap: 30px;                  
+      } 
+      &__block-links{
+            column-gap: 20px; 
+      }      
+}
+}
+
+
+@include adaptive(laptop){
+      .header{
+            &__block-links, &__link{
+                  display: none;
+            }
+            &__content{
+                  align-items: center;
+                  margin-top: 20px;
+            }                  
+      }
+
+}
+
+
+.header__burger{
+
+      padding-top: 30px;
+      padding-inline: 3px;
+      padding-bottom: 0;
+      background-color: $bgccolorHeader;   
+      border-radius: 0 0 0 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      row-gap: 30px;
+
+      &-head{           
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            column-gap: 20%;
+      }
+      &-logo{
+            width: 250px;
+      }
+      
+
+      &-close{
+            font-size: 40px;
+            background-color: $bgccolorHeader;             
+      }
+      &-open{
+            color: #100E14;
+            font-size: 40px;
+            box-shadow: 3px 3px 3px 0 #100E14;            
+            border-radius: 5px;
+            display: none;
+      }
+
+      &-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 5px;
+            width: 100%;
+      }
+      &-item{
+            box-shadow: 0 3px 3px 0 #100E14;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+      }
+      
+      &-item:hover{
+            background: linear-gradient(180deg,grey, #eee, rgb(49, 49, 49));
+      }
+      &-link{
+           display: block;
+           width: 100%; 
+           height: 100%;
+           padding: 20px;
+           color: #100E14;
+           text-transform: uppercase;
+           font-weight: 700;
+           font-size: 18px;
+      }
+}
+
+@include adaptive(laptop){
+      .header__burger{
+            &-open{display: block;}
+      }
+}
+
+.hidden{display: none;}
+.visible{display: flex;}
+
+

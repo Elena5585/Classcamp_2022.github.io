@@ -1,0 +1,187 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_reset'; 
+@use '_setup';
+
+.footer{
+      padding-block: 120px;
+
+      &__content{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            column-gap: 15%;
+      }
+      &__content-logo{
+            margin-top: 8.65px;
+      }
+      &__content-block{
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            align-items: start;
+            column-gap: 8%;
+            flex-grow: 1;
+      }
+      &__block-item{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            row-gap: 48px;
+            width: 25%;
+      }
+
+      &__title-link{
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 111%;
+            letter-spacing: 0.18px;
+            color: $colorTitle;            
+            display: block;
+            padding: 5px;
+      }
+      &__item-blocks{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            row-gap: 10px;            
+      }
+      &__link-item{
+            font-size: 16px;
+            line-height: 200%;
+            font-weight: 400;
+            letter-spacing: 0.16px;
+            color: $colorTitle;
+      }
+      &__block-social{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            column-gap: 10px;            
+      }
+      &__social-img{
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+      }
+
+}
+@media screen and (max-width: 1300px) {
+      .footer{
+            padding-block: 80px;
+
+            &__content{
+                  column-gap: 8%;
+            }
+            &__content-block{
+                  column-gap: 5%;
+            }
+            &__title-link{
+                  font-size: 16px;
+            }
+            &__item-blocks, &__blocks-link{
+                  font-size: 15px;
+            }
+            &__link-item{
+                  font-size: 15px;
+            }
+
+      }     
+      
+}
+@include adaptive(laptop){
+      .footer{
+            &__content{
+                  column-gap: 5%;
+            }
+            &__content-block{
+                  column-gap: 3%;
+            }            
+            &__content-logo{
+                  flex-basis: 18%;
+                  width: 18%;
+            }
+            &__block-item{
+                  row-gap: 36px;
+            }
+            &__title-link{
+                  font-size: 14px;
+            }
+            &__link-item{
+                  font-size: 13px;
+            }
+
+            &__social-img{
+                  width: 40px;
+                  height: 40px;
+                  padding: 5px;
+            }
+      }
+}
+@include adaptive(tablet){
+      .footer{
+           padding-block: 50px;
+
+            &__content{
+                  height: 300px;
+                  column-gap: 7%;
+                  justify-content: space-between;                  
+                  position: relative;
+            }
+            &__content-block{                  
+                  width: 100%;
+                  position: absolute;
+                  justify-content: space-between;
+                  bottom: 5%;
+                  left: 0%;
+                  column-gap: 30px;
+            }            
+            &__content-logo{
+                  flex-basis: 25%;
+                  width: 25%;
+            }
+            &__block-item{
+                  row-gap: 36px; 
+                  align-items: flex-start;                               
+            }
+            
+            
+            &__title-link{
+                  font-size: 14px;
+                  text-align: justify;
+            }
+            &__link-item{
+                  font-size: 13px;
+                  text-align: justify;
+            }            
+
+            &__social-img{
+                  width: 40px;
+                  height: 40px;
+                  padding: 5px;
+                  margin-left: 15px;
+            }
+      }
+}
+
+@media screen and (max-width:450px) {
+      .footer{
+            &__title-link{
+                  font-size: 12px;                  
+            }
+            &__link-item{
+                  font-size: 12px;                  
+            }
+            &__social-img{
+                  width: 30px;
+                  height: 30px;
+                  padding: 5px;
+                  margin-left: 10px;
+            }  
+      }
+}

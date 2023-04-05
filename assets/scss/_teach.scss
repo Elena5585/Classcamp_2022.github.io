@@ -1,0 +1,120 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_reset'; 
+@use '_setup';
+
+.teach{
+      height: 433px;      
+      width: 100%;
+
+      &__content{
+            height: 100%;
+            width: 100%;
+            background-color: #1D1B24;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-block: 70px;
+
+      }
+      &__content-title{
+            margin-bottom: 32px;
+            font-weight: 400;
+            font-size: 63px;
+            line-height: 144%;
+            letter-spacing: 2.1px;
+            text-align: center;
+            color: $colorTitle;
+      }
+      &__content-descr{
+            @include text;
+            margin-bottom: 70px;
+            font-weight: 400;
+            text-align: center;
+            color: $colortext70;            
+      }
+      &__content-btn{
+            display: block;
+            width: 281px;
+            height: 66px;
+            background-color: $bgcBtn;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: $colorTitle;
+            font-size: 23px;
+            font-weight: 400;
+            letter-spacing: 0.42px;
+            line-height: 110%;
+            text-align: left;           
+
+      }
+}
+#unic{font-size: 50px; margin-left: 20px;}
+
+@media screen and (max-width: 1300px){
+      .teach{
+            &__content-title{                  
+                  font-size: 41px;                  
+            }
+            &__content-descr{
+                  font-size: 20px;
+                  margin-bottom: 60px;                             
+            }            
+      }
+}
+@include adaptive(laptop){
+      
+      .teach{
+            padding-block: 30px;
+
+            &__content-title{                  
+                  font-size: 34px;                  
+            }
+            &__content-descr{
+                  font-size: 18px;
+                  margin-bottom: 40px;                             
+            }  
+      }
+      #unic{font-size: 40px; margin-left: 20px;}
+
+}
+@include adaptive(tablet){
+      .teach{
+            &__content-title{                  
+                  font-size: 24px;                  
+            }
+            &__content-descr{
+                  font-size: 16px;
+                  margin-bottom: 40px;                             
+            }  
+            &__content-btn{            
+                  height: 46px;            
+                  font-size: 16px;
+                  padding: 10px;            
+            }
+      }
+      #unic{font-size: 40px; margin-left: 10px;}
+}
+@include adaptive(phone){
+      .teach{
+            &__content-title{                  
+                  font-size: 18px;                  
+            }
+            &__content-descr{
+                  font-size: 14px;
+                  margin-bottom: 25px;
+                  width: 85%;                             
+            }  
+            &__content-btn{  
+                  width: 180px;          
+                  height: 36px;            
+                  font-size: 13px;
+                  padding: 8px;            
+            }
+      }
+      #unic{font-size: 30px; margin-left: 10px;}
+}

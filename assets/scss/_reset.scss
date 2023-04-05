@@ -1,0 +1,20 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+@import url(../css/fonts.css);
+
+*{ padding: 0; margin: 0; border: 0;}
+
+  *, ::before, ::after{box-sizing: border-box;}
+
+  html, body{ height: 100%; width: 100%;}
+
+  body{ background-color: #100E14;  font-family: 'Roboto', sans-serif;}
+
+  a{text-decoration: none;}
+
+  ul{list-style: none;}
+
+  img{ max-width: 100%; height: auto;}
+
+  input, button, textarea{cursor: pointer; outline: none;}

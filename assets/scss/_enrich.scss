@@ -1,0 +1,130 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_reset'; 
+@use '_setup';
+
+.enrich{
+      padding-top: 240px;
+      padding-bottom: 150px;
+      
+      &__content{            
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            column-gap: 50px;
+      }
+      &__content-img{
+            flex-basis: 55%;
+            width: 55%;
+            height: auto;           
+
+      }
+
+      &__content-info{
+            align-self: center;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            row-gap: 38px;
+      }
+      &__info-title{
+            @include title;
+            color: $colorTitle;
+      }
+
+      &__info-descr{
+            @include info;
+      }
+      &__descr-bold{
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 141%;
+            letter-spacing: 1.08px;
+            color: $colorTitle;
+            text-align: left;
+            vertical-align: top;
+      } 
+}
+
+@media screen and (max-width: 1300px) {
+      .enrich{
+            padding-top: 100px;
+            padding-bottom: 100px;
+            
+            &__info-title{
+                  font-size: 36px;
+            }
+            &__info-descr{
+                  font-size: 22px;
+            }
+            &__descr-bold{
+                  font-size: 22px;
+            }            
+      }      
+}
+
+@include adaptive(laptop) {
+      .enrich{
+            padding-block: 80px;
+
+            &__content-img{
+                  width: 45%;
+                  flex-basis: 45%;
+            }
+            &__content-info{
+                  width: 55%;
+                  flex-basis: 55%;
+                  row-gap: 24px;
+            }
+            &__info-title{
+                  font-size: 32px;
+            }
+            &__info-descr{
+                  font-size: 20px;
+            }
+            &__descr-bold{
+                  font-size: 20px;
+            }  
+      }
+}
+@include adaptive(tablet) {
+      .enrich{
+            padding-block: 70px;
+            
+            &__info-title{
+                  font-size: 24px;
+            }
+            &__info-descr{
+                  font-size: 16px;
+            }
+            &__descr-bold{
+                  font-size: 16px;
+            }  
+      }
+}
+@include adaptive(phone) {
+      .enrich{
+            padding-block: 50px;
+
+            &__content{flex-direction: column; justify-content: center; align-items: center; row-gap: 50px;}
+            &__content-img{order: 2; width: 85%;}
+            &__content-info{order: 1; width: 100%; row-gap: 14px; align-items: center;} 
+            
+            &__info-title{
+                  font-size: 22px;
+                  text-align: center;
+                  width: 70%;
+            }
+            &__info-descr{
+                  font-size: 16px;
+                  width: 80%;
+                  text-align: center;
+            }
+            &__descr-bold{
+                  font-size: 16px;
+            }  
+      }
+}
