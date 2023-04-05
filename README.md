@@ -1,2 +1,2 @@
 # Classcamp_2022.github.io
-Landing(+burger menu)
+Landing(+burger menu & adaptive)
