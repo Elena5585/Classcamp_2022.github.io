@@ -4,3 +4,5 @@
 - С адаптивом
 - С burger menu
 
+![Screenshot](https://pikwy.com/web/642d398244231632057149f0)
+
