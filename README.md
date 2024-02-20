@@ -1,8 +1,8 @@
 # Classcamp_2022.github.io
 
-- Простой лэндинг одностраничного сайта (вы можете посмотреть сами по ссылке https://elena5585.github.io/Classcamp_2022.github.io/)
-- С адаптивом
-- С burger menu
+- Landing (ClassCamp)
+- HTML, CSS, Javascript
+- Adaptive for different screens
 
 ![Screenshot](https://github.com/Elena5585/Classcamp_2022.github.io/blob/main/screenshot.jpg)
 
